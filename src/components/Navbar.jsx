@@ -18,36 +18,39 @@ const Navbar = () => {
   return (
     // ----------main div-------------------------------
     <div
-      className="flex bg-[#FFFFFF] border border-black justify-around pt-2 cursor-pointer  sm:border-amber-300 sm:border-2 sm:w-auto w-full md:w-auto md:px-1"
+      className="flex bg-[#FFFFFF]  justify-around pt-2 cursor-pointer  sm:w-auto w-full md:w-auto md:px-1 "
       style={{ color: "#00000099" }}
     >
       {/* ----------------------nav------------------------ */}
-      <nav className="  border border-blue-500 w-full  flex grow  justify-between flex-nowrap items-center mx-3 gap-1 sm:border-2 sm:border-purple-500 sm:min-w-[700px] sm:max-w-auto sm:mx-auto sm:justify-around sm:flex-row md:w-auto md:grow md:flex-nowrap lg:w-full md:mx-0  ">
-        <div className="flex  border-2 grow border-amber-500 shrink-0 justify-around mr-1 gap-1 pr-2 sm:gap-7  sm:border-2 sm:border-amber-300 md:w-auto md:grow md:items-center md:px-0 md:justify-center lg:grow-0">
-          <img
-            src={linkedinlogo}
-            alt="logo"
-            className=" h-[35px] w-[35px]] bottom-0.4 relative md:top-0.5 md:h-[38px] md:w-[38px] lg:top-0"
-          />
+      <nav className="  w-full  flex grow  justify-between flex-nowrap items-center mx-3 gap-1 sm:min-w-[700px] sm:max-w-auto sm:mx-auto sm:justify-around sm:flex-row md:w-auto md:grow md:flex-nowrap lg:w-full md:mx-0 lg:pl-10 ">
+        <div className="flex   grow shrink-0 justify-around mr-1 gap-1 pr-2 sm:gap-7  md:w-auto md:grow md:items-center md:px-0 md:justify-center lg:grow-0 lg:ml-2">
+          <NavLink to="/">
+            {" "}
+            <img
+              src={linkedinlogo}
+              alt="logo"
+              className=" h-[35px] w-[35px]] bottom-0.4 relative md:top-0.5 md:h-[38px] md:w-[38px] lg:top-0 lg:left-6"
+            />
+          </NavLink>
           <div className="flex items-center gap-1 md:flex-col lg:flex-row ">
             <FaSearch
-              className="h-4.5 text-[#3D3D3D] w-4 mt-0.6 sm:h-6 md:relative md:top-1 lg:absolute lg:top-6 lg:left-21 lg:text-[#3D3D3D] lg:z-10 "
+              className="h-4.5 text-[#3D3D3D] w-4 mt-0.6 sm:h-6 md:relative md:top-2 lg:relative lg:top-0.5 lg:left-7 lg:text-[#3D3D3D] lg:z-10 "
               // style={{ color: "#00000099" }}
             />
-            <p className="hidden md:block md:text-[0.8rem ] lg:hidden ">
+            <p className="hidden md:block md:text-[0.8rem ] relative bottom-1 lg:hidden ">
               Search
             </p>
             <input
               type="text"
               placeholder="Search"
-              className=" h-[34px] hidden lg:block lg:relative lg:w-60 lg:pl-8 lg:min-w-[280px] lg:bg-[#F2F2F2] lg:text-[#292a29] lg:rounded-sm"
+              className=" h-[36px] hidden lg:block lg:relative lg:w-60 lg:pl-8 lg:min-w-[280px] lg:bg-[#F2F2F2] lg:text-[#292a29] lg:rounded-sm"
             />
           </div>
         </div>
         {/* ------------------buttons------------------------- */}
-        <div className="flex justify-around border mx-0 border-pink-500 grow gap-3 relative top-0.4  sm:border-r-1  sm:w-[360px] sm:h-[47px] sm:pr-1 sm:border-2 sm:border-pink-500 sm:justify-between md:w-[400px]  md:grow md:items-center md:justify-around lg:ml-10 lg:justify-end lg:gap-5 ">
+        <div className="flex justify-around  mx-0  grow gap-3 relative top-0.4  sm:border-r-1 sm:border-gray-300  sm:w-[360px] sm:h-[47px] sm:pr-1  sm:justify-between md:w-[400px]  md:grow md:items-center md:justify-around lg:ml-10 lg:justify-end lg:gap-5 ">
           <div>
-            <NavLink to="/">
+            <NavLink to="/home">
               <TiHome className="h-[24px] w-[24px]  relative top-0.1 bottom-0.5 hover:text-[#191919] sm:h-[30px] sm:w-[30px] sm:relative sm:top-1 md:top-0.5" />
               <p className="hidden md:block md:relative md:bottom-0.5 md:text-[0.8rem] hover:text-[#191919]">
                 Home
@@ -93,7 +96,7 @@ const Navbar = () => {
         </div>
         {/* ------------------another div----------- */}
 
-        <div className="flex hidden  sm:border-2 sm:border-blue-500 sm:flex  md:grow md:items-center md:justify-center md:flex ">
+        <div className="flex hidden   sm:flex  md:grow md:items-center md:justify-center md:flex ">
           <div>
             <BsFillGrid3X3GapFill className=" sm:h-[24px] sm:w-[28px] sm:relative sm:top-1.7 sm:left-6 md:top-0 md:left-4" />
             <p className="hidden hover:text-[#191919] sm:block sm:flex sm:flex-row sm:text-[0.8rem] md:flex md:text-[0.8rem] md:bottom-0 md:top-0.8 md:relative">
