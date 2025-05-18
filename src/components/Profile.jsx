@@ -4,7 +4,7 @@ import ProfileFooter from "./ProfileFooter";
 
 //images
 import introBg2 from "../assets/intro-bg.jpg";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/Profile.jpg";
 import logo from "../assets/logo.jpg";
 import cardImg from "../assets/cardimg1.png";
 import krlogo from "../assets/logo.jpg";
