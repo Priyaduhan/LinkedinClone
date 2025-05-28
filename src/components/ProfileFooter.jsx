@@ -8,7 +8,7 @@ const ProfileFooter = () => {
   return (
     <>
       <div>
-        <div className="md:flex justify-between md:mx-1 my-4">
+        <div className="md:flex justify-between md:mx-1 my-4 lg:justify-around">
           <div className="grid grid-cols-2 text-[12px] my-2">
             <div>About</div>
             <div>Accessibility</div>
@@ -76,7 +76,7 @@ const ProfileFooter = () => {
           </div>
         </div>
 
-        <p className="text-[12px] text-gray-500">LinkedIn Corporation © 2025</p>
+        <p className="text-[12px] text-gray-500 lg:flex lg:justify-around">LinkedIn Corporation © 2025</p>
       </div>
     </>
   );

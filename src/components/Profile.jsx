@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
+import AboutPop from "./AboutPop";
 import ProfileFooter from "./ProfileFooter";
+// import Comment from "./Comment";
 
 //images
 import introBg2 from "../assets/intro-bg.jpg";
@@ -19,6 +22,20 @@ import { IoEye } from "react-icons/io5";
 import { TiLocationArrowOutline } from "react-icons/ti";
 
 const Profile = () => {
+  const [showDialog, setShowDialog] = useState(false);
+  const [bio, setbio] =
+    useState(` My journey began with a fascination for Linux systems, which led me to delve into the world of networking. As I honed my skills, Iembraced the power of Kali Linux tools and ventured into Python programming. I channeled my creativity into crafting applications
+              using Django, showcasing my ability to bring ideas to life.
+              Seeking to expand my horizons, I transitioned to the dynamic realm
+              of JavaScript, immersing myself in the MERN (MongoDB, Express.js,
+              React, Node.js) stack. For the past 3 years, I've been dedicated
+              to mastering this ecosystem, using it to build innovative and
+              responsive web applications. My passion for learning, combined
+              with my diverse technical expertise, fuels my drive to tackle new
+              challenges and contribute to the ever-evolving tech landscape.
+              Let's connect and explore the endless possibilities at the
+              intersection of innovation and technology!`);
+
   return (
     <div className="bg-[#F4F2EE]  ">
       <Navbar />
@@ -88,23 +105,25 @@ const Profile = () => {
           </div>
           {/* -----------------About------------------ */}
           <div className="bg-white p-4 my-2 border border-gray-300 ">
-            <h2 className="text-[20px] font-medium">About</h2>
-            <p className="text-[14px] justify-center">
-              My journey began with a fascination for Linux systems, which led
-              me to delve into the world of networking. As I honed my skills, I
-              embraced the power of Kali Linux tools and ventured into Python
-              programming. I channeled my creativity into crafting applications
-              using Django, showcasing my ability to bring ideas to life.
-              Seeking to expand my horizons, I transitioned to the dynamic realm
-              of JavaScript, immersing myself in the MERN (MongoDB, Express.js,
-              React, Node.js) stack. For the past 3 years, I've been dedicated
-              to mastering this ecosystem, using it to build innovative and
-              responsive web applications. My passion for learning, combined
-              with my diverse technical expertise, fuels my drive to tackle new
-              challenges and contribute to the ever-evolving tech landscape.
-              Let's connect and explore the endless possibilities at the
-              intersection of innovation and technology!
-            </p>
+            <div className="flex  justify-between">
+              <h2 className="text-[20px] font-medium">About</h2>
+
+              <RiPencilLine
+                className="h-[25px] w-[25px] hover:cursor-pointer hover:h-[30px] hover:w-[30px]"
+                onClick={() => setShowDialog(true)}
+              />
+              {/* --dialog box------- */}
+              {showDialog && (
+                <AboutPop
+                  showDialog={showDialog}
+                  setShowDialog={setShowDialog}
+                  bio={bio}
+                  setbio={setbio}
+                />
+              )}
+            </div>
+            {/* //here Write */}
+            <p className="text-[14px] justify-center">{bio}</p>
             <div className="border border-gray-300 rounded-md mt-3 p-4">
               <div className="flex gap-1 font-medium">
                 <IoDiamondOutline className="text-[20px]" />
@@ -160,7 +179,7 @@ const Profile = () => {
                 <p className="text-[14px] ">
                   Bachelors of Computer Applications
                 </p>
-                <p p className="text-[14px] text-gray-500 ">
+                <p className="text-[14px] text-gray-500 ">
                   August 2023-June 2025
                 </p>
               </div>

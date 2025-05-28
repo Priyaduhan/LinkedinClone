@@ -1,6 +1,7 @@
 import React from "react";
 import cardImg from "../assets/cardimg1.png";
 import postImg from "../assets/post-img.jpeg";
+import Comment from "./Comment.jsx";
 
 import { PiDotsThreeBold } from "react-icons/pi";
 import { RxCross1 } from "react-icons/rx";
@@ -103,6 +104,7 @@ const Card = ({ namei, profession, posted_days, description }) => {
             <IoIosSend className="text-[18px] cursor-pointer" />
             <p className="hidden  lg:flex text-[14px] ">Send</p>
           </div>
+          <Comment />
         </div>
       </div>
     </div>
