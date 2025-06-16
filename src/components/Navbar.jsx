@@ -24,7 +24,7 @@ const Navbar = () => {
       {/* ----------------------nav------------------------ */}
       <nav className="  w-full  flex grow  justify-between flex-nowrap items-center mx-3 gap-1 sm:min-w-[700px] sm:max-w-auto sm:mx-auto sm:justify-around sm:flex-row md:w-auto md:grow md:flex-nowrap lg:w-full md:mx-0 lg:pl-10 ">
         <div className="flex   grow shrink-0 justify-around mr-1 gap-1 pr-2 sm:gap-7  md:w-auto md:grow md:items-center md:px-0 md:justify-center lg:grow-0 lg:ml-2">
-          <NavLink to="/">
+          <NavLink to="/profile">
             {" "}
             <img
               src={linkedinlogo}

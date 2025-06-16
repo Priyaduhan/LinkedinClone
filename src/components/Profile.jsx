@@ -11,7 +11,10 @@ import profile from "../assets/Profile.jpg";
 import logo from "../assets/logo.jpg";
 import cardImg from "../assets/cardimg1.png";
 import krlogo from "../assets/logo.jpg";
+
 import gjulogo from "../assets/gjulogo.png";
+import { useSelector } from "react-redux";
+
 //
 import { LuDot } from "react-icons/lu";
 import { IoDiamondOutline } from "react-icons/io5";
@@ -23,18 +26,19 @@ import { TiLocationArrowOutline } from "react-icons/ti";
 
 const Profile = () => {
   const [showDialog, setShowDialog] = useState(false);
-  const [bio, setbio] =
-    useState(` My journey began with a fascination for Linux systems, which led me to delve into the world of networking. As I honed my skills, Iembraced the power of Kali Linux tools and ventured into Python programming. I channeled my creativity into crafting applications
-              using Django, showcasing my ability to bring ideas to life.
-              Seeking to expand my horizons, I transitioned to the dynamic realm
-              of JavaScript, immersing myself in the MERN (MongoDB, Express.js,
-              React, Node.js) stack. For the past 3 years, I've been dedicated
-              to mastering this ecosystem, using it to build innovative and
-              responsive web applications. My passion for learning, combined
-              with my diverse technical expertise, fuels my drive to tackle new
-              challenges and contribute to the ever-evolving tech landscape.
-              Let's connect and explore the endless possibilities at the
-              intersection of innovation and technology!`);
+
+  // Add this inside the Profile component
+  const bio = useSelector((state) => state.bio.value);
+  //   const [bio, setbio] =
+  //     useState(` My journey began with a fascination for Linux systems, which led me to delve into the world of networking. As I honed my skills, Iembraced the power of Kali Linux tools and ventured into Python programming. I channeled my creativity into crafting applications
+  // using Django, showcasing my ability to bring ideas to life. Seeking to expand my horizons, I transitioned to the dynamic realmof JavaScript, immersing myself in the MERN (MongoDB, Express.js,
+  //               React, Node.js) stack. For the past 3 years, I've been dedicated
+  //               to mastering this ecosystem, using it to build innovative and
+  //               responsive web applications. My passion for learning, combined
+  //               with my diverse technical expertise, fuels my drive to tackle new
+  //               challenges and contribute to the ever-evolving tech landscape.
+  //               Let's connect and explore the endless possibilities at the
+  //               intersection of innovation and technology!`);
 
   return (
     <div className="bg-[#F4F2EE]  ">
@@ -117,8 +121,8 @@ const Profile = () => {
                 <AboutPop
                   showDialog={showDialog}
                   setShowDialog={setShowDialog}
-                  bio={bio}
-                  setbio={setbio}
+                  // bio={bio}
+                  // setbio={setbio}
                 />
               )}
             </div>
